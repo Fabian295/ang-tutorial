@@ -1,0 +1,94 @@
+<div class="wrapper">
+
+<div class="page-nav">
+   <ul class="nav-menu" id="nav-menu">
+     <li><a href="structuals#for-dir">*ngFor</a></li>
+     <li><a href="structuals#pipes-dir">Pipes</a></li>
+     <li><a href="structuals#if-dir">*ngIf</a></li>
+     <li><a href="structuals#switch-dir">*ngSwitch</a></li>
+   </ul>
+ </div>
+
+      <div class="cards-container cards d-flex justify-content-evenly align-items-stretch p-2 m-2" style="color: black;">
+
+          <div class=" card p-2 m-2" style="width: 32%;  margin: 2rem auto;">
+            <div class="card-body">
+              <img [src]="cardUrl" alt="" class="card-img-top mb-3">
+
+              <h4 class="card-title">Structural Directives</h4>
+              <p class="card-text">
+                Structural Directives are identified
+                by the asterisk at the beginning
+                of each Structural Directive.
+                *ngFor is the equivalent for the Vanilla-JS "for of" loop. Unlike in JavaScript (JS), where
+                the for of loop can only be used for objects, can
+                *ngFor be used for both objects and arrays.
+              </p>
+            </div>
+          </div>
+
+          <div class=" card p-2 m-2 text-center" style="width: 32%;">
+            <div class="card-body">
+              <img [src]="cardUrl" alt="" class="card-img-top mb-3">
+
+              <h4 class="card-title">Structural Directives</h4>
+              <p class="card-text">
+                In the table beneath I used *ngFor to loop through some data.
+                This data would normally come from a database via a back-end server, but here I used
+                a JSON file to provide the data, for simplicity, but the syntax logic is just the same.
+                Just realise that in real life you must make a http request to the back-end server to get to the database
+              </p>
+            </div>
+          </div>
+
+          <div class=" card p-2 m-2 text-end" style="width: 32%;">
+            <div class="card-body">
+              <img [src]="cardUrl" alt="logo" width="90% " class="card-img-top mb-3 m-auto">
+
+              <h4 class="card-title">Structural Directives</h4>
+              <p class="card-text">
+
+              </p>
+            </div>
+          </div>
+
+      </div>
+  </div>
+
+  <div id="for-dir" class="tables-container">
+
+    <button (click)="scrollUp()" >SCROLL TO TOP</button>
+    <p class="fromChild">
+      {{ childData }}
+    </p>
+    <app-tables (notify)="parentHandler($event)" [child]="parent"></app-tables>
+  </div>
+
+  <div id="pipes-dir" class="pipes-tables">
+    <button class="btn btn-pipes" (click)="scrollUp()" >SCROLL TO TOP</button>
+    <app-pipes></app-pipes>
+  </div>
+
+  <div id="if-dir" class="if-container">
+    <h1 class="if-title">*ngIf</h1>
+    <div class="div-from-child">
+      <div class="div-box">
+       {{ childDiv }}
+      </div>
+     </div>
+    <div >
+      <button (click)="scrollUp()" >SCROLL TO TOP</button>
+
+      <app-if-dir (show)="showParent($event)"></app-if-dir>
+
+    </div>
+  </div>
+
+  <div id="switch-dir" class="switch-container">
+    <button (click)="scrollUp()" >SCROLL TO TOP</button>
+    <h1 class="switch-title">*ngSwitch</h1>
+    <app-switch-dir></app-switch-dir>
+  </div>
+
+
+

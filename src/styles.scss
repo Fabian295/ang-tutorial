@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: #151515;
+  color: #fff;
+  font-family: 'Convergence' , sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: aqua;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: skyblue;
+    transition: color 350ms ease;
+  }
+}
+
+ul {
+  list-style: none;
+}

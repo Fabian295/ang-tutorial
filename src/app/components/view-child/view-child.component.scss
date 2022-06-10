@@ -1,0 +1,59 @@
+$fk: hsl(266, 97%, 53%);
+
+body {
+  color: #fff;
+
+}
+
+.view-container {
+  width: 95vw;
+  min-height: 90vh;
+  margin: 0 auto;
+}
+
+.title {
+  color: lighten($fk, 10%);
+  text-align: center;
+  margin: 2rem auto;
+}
+
+h3 {
+  width: max-content;
+  padding: 1rem;
+  margin: 2rem auto;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.btn {
+  color: skyblue;
+  border: 2px solid skyblue;
+  background-color: darkblue;
+  transition: color 400ms ease, border 400ms ease,
+  background-color 400ms ease;
+
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: blue;
+  }
+}
+
+.btn.pt-btn {
+  color: yellowgreen;
+  border: 2px solid yellowgreen;
+  background-color: darkgreen;
+
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: green;
+  }
+}
+

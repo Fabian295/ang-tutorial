@@ -1,0 +1,39 @@
+<div class="tables-container">
+<div class="link">
+  <a href="./structurals">BACK TOP </a>
+</div>
+  <h2 class="sub-title">Using "*ngFor"</h2>
+
+  <table class="table" style="color: white; border: 1px solid white;">
+    <tr style=" padding: 1.5rem;" class="thead-dark">
+      <th>Id</th>
+      <th>Name</th>
+      <th>City</th>
+    </tr>
+    <tr *ngFor="let user of users" >
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.city }}</td>
+    </tr>
+  </table>
+
+  <p class="for-text">
+    By using the directive *ngFor and
+    looping through the data, which can be all kinds of formats, but often  this will be a JSON format,
+    can easely be spread out in a table.
+    For simplicity sakes I used local object with  the data, but most of the time this data will come
+    with a http request via the backend server from some kind of data storage, like a database.
+  </p>
+
+  <!-- <div class="sandbox">
+    <p class="parent-text">
+      {{ child }}
+    </p>
+    <div class="toParent">
+      <button (click)="passData()" class="btn btn-success">Send To Parent</button>
+    </div>
+  </div> -->
+
+
+
+</div>

@@ -1,0 +1,166 @@
+@use '../../../colors' as *;
+
+body {
+  background-color: map-get($colors, secondary, 300);
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+  margin: 1rem auto;
+
+}
+
+.container-tables {
+  width: 100%;
+  background-color: map-get($colors, grays, 300);
+}
+
+.container-pipes {
+  width: 100%;
+  background-color: map-get($colors, secondary, 400);
+}
+
+.title {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.sub-title {
+  color: rgb(173, 171, 171);
+  text-align: center;
+}
+
+.card {
+  background-color: #000;
+  // width: 32%;
+  padding: 1rem;
+  border-top: 2px solid map-get($colors, grays, 200 );
+  border-left: 2px solid map-get($colors, grays, 200 );
+}
+
+.section-intro {
+  margin-top: 1.5rem;
+  font-size: 1.6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  .card {
+    width: 25%;
+  }
+}
+
+ol{
+  // width: 35vw;
+  // margin: 0 2rem;
+  padding: 0 1.5rem;
+  font-size: 1.5vw;
+
+  li {
+
+    list-style-type: decimal-leading-zero;
+  }
+}
+
+.cards-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  .card {
+    width: 33%;
+  }
+}
+
+.pipe-syntax {
+  color: map-get($colors, secondary, 400 );
+}
+
+// .code-pipe {
+//   min-width: 100%;
+//   // min-height: 5rem;
+//   line-height: 1.8;
+//   font-size: 0.9rem;
+//   background-color:map-get($colors, grays, 200 );
+//   color:#000;
+// }
+
+table {
+  margin: 2rem auto;
+  text-align: center;
+  width: 100%;
+}
+
+table, tr, th, td {
+  padding: 0.4rem 1rem ;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.example {
+  text-align: center;
+  font-size: 1.2rem;
+
+
+  .example-1, .example-2 {
+    width:  min(30rem,  100%);
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #000;
+  }
+
+  .info {
+    margin-right: 3rem;
+    font-size: 1rem;
+    font-style: italic;
+    color: rgb(165, 162, 162);
+  }
+
+  .example-2 {
+    width: min(35rem, 100%);
+  }
+  .chained {
+    margin-right: 2rem;
+  }
+}
+
+
+
+.spacer {
+  display: inline-block;
+  width: 2rem;
+}
+
+.custom-con {
+  display: flex;
+  width: 95vw;
+  margin: 1rem auto;
+
+  ol li {
+    font-style: italic;
+    text-align-last: left;
+    margin-left: -1.6rem;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 23vw;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.example-pipe {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  // width:  min(30rem,  100%);
+  margin: 0.7rem 0;
+  // padding: 1.5rem;
+  background-color: rgb(125, 124, 124);
+}
+

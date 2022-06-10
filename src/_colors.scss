@@ -1,0 +1,172 @@
+
+/****************************************
+  Color Map, one big Map with multiple sub maps
+  --------------------------------------
+  
+  Methods for using and getting values in a map
+  - map-get($colors, secondary, 400) -   (
+          <name map>, <optional map> , <key> -->
+          returns the value of the key -
+  
+  - map-has-key($colors, primary) --> 
+                returns a boolean -
+
+  - map-remove($colors, primary) --> 
+              deletes primary ,in this case -
+
+  - map-merge($colors, (tertiary: hsl(340, 75%, 50%)))  --> 
+                            (key: value)  
+    adds/mergs new map's key-value pair -
+****************************************/
+
+$colors: (
+  primary: (
+    100:  hsl(270, 87%, 70%),    
+    200:  hsl(270, 87%, 60%),
+    300:  hsl(270, 87%, 50%),
+    400:  hsl(270, 87%, 40%),
+    500:  hsl(270, 87%, 25%),
+  ),
+  secondary: (
+    100:  hsl(225, 73%, 80%),
+    200:  hsl(225, 73%, 67%),
+    300:  hsl(225, 73%, 57%),
+    400:  hsl(225, 73%, 45%),
+    500:  hsl(225, 73%, 35%),
+  ),
+  tertiary: (
+    500:  hsl(150, 100%, 75%),
+    400:  hsl(150, 100%, 50%),
+    300:  hsl(150, 100%, 40%),
+    200:  hsl(150, 100%, 30%),
+    100:  hsl(150, 100%, 15%),
+    ),
+    blues: (
+    100:  hsl(240, 100%, 70%),
+    200:  hsl(240, 100%, 60%),
+    300:  hsl(240, 100%, 50%),
+    400:  hsl(240, 100%, 35%),
+    500:  hsl(240, 100%, 20%),
+  ),
+  oranges: (
+    100:  hsl(39, 100%, 80%),
+    200:  hsl(39, 100%, 65%),
+    300:  hsl(39, 100%, 50%),
+    400:  hsl(39, 100%, 35%),
+    500:  hsl(39, 100%, 20%),
+    ),
+  accent: (
+    100:  hsl(180, 100%, 90%),
+    200:  hsl(180, 100%, 75%),
+    300:  hsl(180, 100%, 50%),
+    400:  hsl(180, 100%, 35%),
+    500:  hsl(180, 100%, 20%),
+  ),
+  yellows: (
+    100:  hsl(60, 100%, 90%),
+    200:  hsl(60, 100%, 70%),
+    300:  hsl(60, 100%, 50%),
+    400:  hsl(60, 100%, 35%),
+    500:  hsl(60, 100%, 20%),
+  ),
+  greens: (
+    100:  hsl(120, 100%, 70%),
+    200:  hsl(120, 100%, 45%),
+    300:  hsl(120, 100%, 25%),
+    400:  hsl(120, 100%, 15%),
+    500:  hsl(120, 100%, 10%),
+  ),
+  grays: (
+    100:  hsl(0, 0%, 65%),
+    200:  hsl(0, 0%, 50%),
+    300:  hsl(0, 0%, 40%),
+    400:  hsl(0, 0%, 25%),
+    500:  hsl(0, 0%, 0%),
+  ),
+  reds: (
+    100:  hsl(0, 100%, 80%),
+    200:  hsl(0, 100%, 65%),
+    300:  hsl(0, 100%, 50%),
+    400:  hsl(0, 100%, 35%),
+    500:  hsl(0, 100%, 20%),
+  ),
+
+);
+
+
+/****************************************
+  Seperate Colors, multiple Color Maps
+****************************************/
+
+$clrs-blue:(
+   lightblue,
+   lightskyblue, 
+   skyblue, 
+   cornflowerblue,
+   dodgerblue,
+   royalblue, 
+   blue,
+   darkblue 
+   );
+$clrs-green:  (
+  lightgreen,
+  lime, 
+  springgreen, 
+  yellowgreen, 
+  lightseagreen,
+  green,
+  darkgreen
+  );
+$clrs-purple:  (
+  orchid, 
+  mediumorchid,
+  rgb(170, 128, 255),
+  rgb(138, 103, 208),
+  mediumslateblue ,
+  rgb(161, 80, 243),
+  rgb(119, 76, 204),
+  rgb(93, 80, 171),
+  rebeccapurple,
+  rgb(87, 33, 140),
+  rgb(63, 28, 99),
+  ) ;
+$clrs-orange:  (
+  rgb(239, 199, 113) ,
+  rgb(246, 164, 12) , 
+  rgb(248, 164, 155) ,
+  lightcoral, 
+  coral,  
+  orangered , 
+  crimson,  
+  darkred 
+  );
+$clrs-pink: ( 
+  thistle,
+  lightpink ,  
+  pink , 
+  rgb(238, 155, 238),  
+  violet,  
+  rgb(185, 108, 185),  
+  rgb(183, 86, 183),  
+  darkorchid,
+  rgb(112, 60, 132),
+  rgb(125, 5, 125) 
+  ) ;
+
+
+
+
+
+
+/****************************************
+ Experiment Code
+****************************************/
+
+    // prime: (
+  //   // $clr-prime: hsl(225, 73%, 57%);
+  //   100: lighten($clr-prime, 30%),
+  //   200: lighten($clr-prime, 15%),
+  //   300: $clr-prime,
+  //   400: darken($clr-prime, 10%),
+  //   500: darken($clr-prime, 25%),
+  // ),

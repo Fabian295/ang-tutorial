@@ -1,0 +1,247 @@
+  <h1 class="title">{{ pageTitle }}</h1>
+  <div class="container-pipes">
+    <h2 class="built-in">Built-In Pipes</h2>
+    <p class="sub-title">10 frequently used built-in pipes</p>
+    <div class="section-intro">
+
+        <div class="card">
+
+          <ol>
+            <li>Percent</li>
+            <li>Number</li>
+            <li>titlecase</li>
+            <li>Date</li>
+            <li>Currency</li>
+          </ol>
+
+        </div>
+        <div class="card">
+          There two kinds of pipes in Angular.
+          One kind is called  <dfn title="">"Custom Pipes"</dfn>.
+          These pipes you can build your self and customise how ever you want them to be,
+          hence the name Custom Pipes.
+
+        </div>
+
+        <div class="card ">
+
+          The other kind is called "Built-in Pipes".
+          Like the name suggests they are allready built and stored within Angular,
+          just waiting for us to implement them.
+
+        </div>
+        <div class="card ">
+          <ol  start="6">
+            <li>Uppercase</li>
+            <li>Lowercase</li>
+            <li>Slice</li>
+            <li>Json</li>
+            <li>Async</li>
+          </ol>
+        </div>
+
+
+    </div>
+  </div>
+
+  <div class="cards-con" style="color: white;">
+    <div class="card p-2 m-2">
+      <div class="card-body">
+        <h2 class="card-title">
+          What are pipes
+        </h2>
+        <p class="card-text p-2 m-2">
+
+          If you have worked with AngularJS it's filters,
+          then it wil be easy for you. These filters are known
+          as "Pipes" in Angular.
+          For every body else:
+          Pipes allow us to change the data before displaying it.
+
+          Normally a pipe takes this data and transforms this input to
+          the desired output.
+        </p>
+      </div>
+    </div>
+
+  <div class="card p-2 m-2">
+    <h2 class="card-title">
+     Syntax of pipes
+    </h2>
+    <div class="card-body">
+      <p class="card-text p-2 m-2">
+        <span class="pipe-syntax">Expression</span> : is the expression which
+        you want to transfor<br><br>
+
+        <span class="pipe-syntax">|</span> : Pipe operator's Symbol / charactesr <br><br>
+
+        <span class="pipe-syntax">pipeArguments</span> : arguments to the Pipe <br><br>
+      </p>
+
+      <p><i>
+        View code example - 1
+      </i></p>
+
+    </div>
+  </div>
+
+  <div class="card p-2 m-2">
+    <div class="card-body">
+      <h2 class="card-title">
+       Chaining of pipes
+      </h2>
+      <p class="card-text p-2 m-2">
+        Pipes can be chained together so we can make use
+        of multiple pipes in one expression.
+        <br><br>
+        For example in the following code,
+        the toDate is passed to the <span>Date Pipe</span>.
+        The output of the Date Pipe is then passed to the <span> Uppercase Pipe</span>
+
+      <p>
+        <p><i>
+         View code example - 2
+      </i></p>
+    </div>
+  </div>
+
+</div>
+
+<p class="ex-title">code-example - 1</p>
+<div class="example p-2 m-2">
+  <div class="example-1">
+    "{{" {{ Expression | pipe : possible arguments }} "}}" <br>
+        <p class="info">   expression  <span class="spacer"></span>
+                            pipe  <span class="spacer"></span>
+                                  optional <span class="spacer"></span>
+        </p>
+  </div>
+</div>
+
+<p class="ex-title">code-example - 2</p>
+
+<div class="example p-2 m-2">
+  <div class="example-2">
+    "{{" {{ dateOfJoining | date : arguments | uppercase }} "}}" <br>
+        <p class="info chained">   expression  <span class="spacer"></span>
+                            pipe  <span class="spacer"></span>
+                                  optional <span class="spacer"></span>
+                                                  pipe <span class="spacer"></span>
+        </p>
+  </div>
+</div>
+
+
+
+<div class="container-tables">
+  <table class="table table-bordered">
+    <tr class="bg-primary">
+      <th>Id</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Salary</th>
+      <th>DOB</th>
+      <th>Age</th>
+    </tr>
+
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name | uppercase}}</td>
+      <td>{{ user.city | lowercase }}</td>
+      <td>{{ user.salary | currency :'€ '}}</td>
+      <td>{{ user.dob | date :' dd/MM/yyyy'}}</td>
+      <td>{{ user.dob | age }}</td>
+    </tr>
+  </table>
+
+</div>
+
+<div class="custom-con">
+  <div class="cards d-flex justify-content-evenly align-items-stretch m2 p-2">
+    <div class="card">
+      <h2 class="card-title">Custom Pipes</h2>
+
+      <div class="card-body">
+        If the built-in pipes are not specific enough or do not result in a satisfying solution,
+        then you are free to generate and customize your own pipe.
+        <br>
+        <p class="custom">
+          You can use the cli to do this. Just type <br>
+          <td class="example-pipe">ng g p dir/pipe_name</td>
+          The g and  p stands for "generate pipe" and will create two files.
+        </p>
+        <ol>
+          <li>pipe_name.pipe.spec.ts</li>
+          <li>pipe_name.pipe.ts</li>
+        </ol>
+        The first file is for testing, the second
+        file is a class.
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img [src]="imgUrl" alt="code template custom pipe">
+      </div>
+      <h2 class="card-title">Custom Pipes</h2>
+
+      <div class="card-body">
+        <p>
+          Angular cli generated code for the .pipe.ts file.
+          A class with the @Pipe decorator and the pre-defined interface "PipeTransform" implemented
+          which comes with the transform method.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Custom Pipes</h2>
+
+      <div class="card-body">
+
+        <p> In the table above I made a custom pipe to calculate the
+          user's age and named it for obvious reasons, age.
+      </p>
+        <p>
+          In the template (HTML)file I gave the table an extra column called age
+          and applied my age  pipe to it.
+        </p>
+        <p class="example-pipe">
+       <code> <td>'{{'{{ user.dob | age }}'}}'</td></code>
+
+        </p>
+        <p>
+          By doing this, the first argument, "value", in the transform method,
+          now holds a copy of the data on which you aplly your pipe to.
+        </p>
+
+
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Custom Pipes</h2>
+
+      <div class="card-body">
+        <p>
+          The second argument is not manditory, unlike the first, and is used
+          when your custom pipe has arguments(parameters in a function), but this is completely optional.
+
+        </p>
+        <p>
+          Every pipe must return some data so the formatted data can be seen in the template,
+          which is why we  use pipes in the first place.
+        </p>
+        <p>
+          We can now make our logic here in the transfform method annd apply  it to tthe value argument,
+          or rather where the value argument stands for.
+          Lastly we just have to return the formattd value/data.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,77 @@
+
+@mixin hover-link($clr: #fff) {
+  box-shadow: 10px 5px 5px 0 rgba(white, 0.2);
+  color: $clr;
+  transition: transform 350ms ease-in-out,
+  background-color 350ms ease-in-out,
+  color 350ms ease-in-out,
+  box-shadow 400ms 200ms ease-in-out;
+  // box-shadow: 0 0.25em 0.5em 0 rgba(white, 0.2);
+
+    @include after() {
+      box-shadow: 0 0 1.25em 0 rgba(white, 0.6);
+      // transition: box-shadow 200ms 1400ms ease-in-out;
+      opacity: 0;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+
+  }
+
+
+  @mixin after($content: '', $pos: absolute) {
+    position: relative;
+
+    &::after {
+      content: $content;
+      position: $pos;
+      @content;
+    }
+  }
+
+
+header {
+  background-color: #000;
+  display: flex;justify-content: space-between;
+  align-items: center;
+  font-family: 'Convergence', sans-serif;
+  // padding: 1.5rem 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+   li {
+     margin-right: 1.5rem;
+
+     a {
+        color: aqua;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+
+          @include hover-link();
+        }
+      }
+
+   }
+}
+
+
+
+  // .link:hover {
+
+  //   @include hover-link();
+  // }

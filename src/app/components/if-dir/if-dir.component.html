@@ -1,0 +1,21 @@
+<div id="if-dir" class="if-comp-con">
+
+  <h1 class="title">*ngIf Directive</h1>
+
+  <div class="output-box">
+
+    <div class="isAvailable" *ngIf="isvisible ; else blueBox" >
+      <p class="box"></p>
+    </div>
+    <ng-template #blueBox class="isAvailable">
+      <p class="blue-box">
+
+      </p>
+    </ng-template>
+    <button (click)="changeBox()" >CLICK</button>
+  </div>
+  <div>
+    <button (click)="showDiv()" >Show Div</button>
+    <!-- <div style="background-color: blue; width: 100px; height: 100px;"></div> -->
+  </div>
+</div>

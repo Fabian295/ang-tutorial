@@ -1,0 +1,66 @@
+<div class="switch-dir">
+  <h1 class="switch-title">*ngSwitch Directive</h1>
+  <p class="intro-par">*ngSwitch is a directive  which is bound to an expression.
+    It is  used to display the element tree  based  on the set of many different elements.
+    It self is build up out of a couple of basic elements, it's own building blocks, if you will.
+    In a nutshell, they are as follows:
+  </p>
+
+<div class="text-block">
+  <h3 class="switch">ngSwitch</h3>
+  <p class="ngswitch">
+    We bind an expression to it.
+  </p>
+</div>
+
+<div class="text-block">
+  <h3 class="switch-case">ngSwitchCase</h3>
+  <p class="ngswitch">
+    It  defines an element with
+    the mathed value we need to provide
+    the * in front/before of.
+  </p>
+</div>
+
+<div class="text-block">
+  <h3 class="switch-default">ngSwitchDefault</h3>
+  <p class="ngswitch">
+      This is the default case which will be executed if no match is found.
+  </p>
+</div>
+
+<div class="example">
+  Select Country: <select (change)="choice($event)" >
+    <option value="">Select Country</option>
+    <option
+    *ngFor="let c of countries"
+    [value]="c.code">
+    {{ c.country }}
+    </option>
+  </select>
+
+</div>
+
+<div [ngSwitch]="selectedCountry" >
+
+  <div *ngSwitchCase="'ned'" class="jumbotron">
+    <h1 class="calling-code">The Dutch Calling Code is +31</h1>
+  </div>
+
+
+  <div *ngSwitchCase="'ind'" class="jumbotron">
+    <h1 class="calling-code">The Indian Calling Code is +91</h1>
+  </div>
+
+
+  <div *ngSwitchCase="'uk'" class="jumbotron">
+    <h1 class="calling-code">The United Kingdom Calling Code is +44</h1>
+  </div>
+
+
+  <div *ngSwitchDefault class="jumbotron">
+    <h1 class="calling-code">Select your Country</h1>
+  </div>
+
+</div>
+</div>

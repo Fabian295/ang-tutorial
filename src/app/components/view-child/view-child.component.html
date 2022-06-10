@@ -1,0 +1,15 @@
+<div class="view-container">
+  <h1 class="title">@ViewChild() & @ViewChildren()</h1>
+
+  <div class="output">
+    <h3 #target class="target">Element to target and manipulate!</h3>
+
+    <div class="btn-div">
+      <button (click)="handleTarget($event)" class="btn">CLICK</button>
+      <button (click)="purpleTarget($event)" class="btn pt-btn">CLICK</button>
+    </div>
+
+  </div>
+
+  <app-counter></app-counter>
+</div>

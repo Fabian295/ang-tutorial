@@ -1,0 +1,28 @@
+@use '../../../colors' as *;
+
+.if-comp-con {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90vw;
+  min-height: 100vh;
+  background-color: map-get($colors, primary, 300 );
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+  padding: 2rem;
+  background-color: map-get($colors, greens, 300 );
+}
+
+.blue-box {
+  width: 5rem;
+  height: 5rem;
+  padding: 2rem;
+  background-color: map-get($colors, oranges, 300 );
+}

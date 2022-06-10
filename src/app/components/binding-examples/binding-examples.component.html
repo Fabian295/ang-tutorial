@@ -1,0 +1,109 @@
+<div id="interpolation" class="binding-container">
+  <H1 *ngIf="isShown" class="pageTitle">{{ pageTitle }} </H1>
+  <H1 *ngIf="!isShown" class="pageTitle">{{ title }} </H1>
+<a href="#top-header">TOP</a>
+  <ol >
+    <li>
+    <h3>Interpolation</h3>
+      <h5 class="page-title">
+        {{ pageTitleLine }}
+      </h5>
+      <div class="code-box">
+        <img  src={{code}} alt="">
+        <img  [src]="tsCode" alt="">
+      </div>
+    </li>
+    <li>
+    <h3>Property Binding</h3>
+      Interpolation data binding is allways from "Child" to "Parrent", that means
+      from "Component" to "Template" / View, if you will.
+      Interpolation can only be used if the binding value is a "String".
+
+      <p>If the binding value is not a String we use "Property Bonding.
+        We put the attribute in square brackets, i.e.: [src]="imageUrl".
+        The component.tss file variable declaration ( with the path/to/the/img ) stays the same.
+      </p>
+    </li>
+    <li>
+     <h3 id="event-binding"> Event Binding, with parentheses.</h3>
+      Let's say we have a button and we want it to have a click event.
+      This is a good use case to combine the click event  with an "if-statement", In Angular
+      we use the "*ngIf" attribute. Let's check out the code.
+      <p>But first, the button.</p>
+
+      <span> <H1 *ngIf="isShown" class="pageTitle">Title: {{ pageTitle }} </H1></span>
+       <span> <H1 *ngIf="!isShown" class="pageTitle">Title: {{ title }} </H1></span>
+      <p>
+        <button class="btn btn-warning" (click)="changeTitle()" >Change Title</button>
+
+      </p>
+
+      <div class="code-box">
+        <img  [src]="compClick" alt="">
+        <img  [src]="tempClick" alt="">
+      </div>
+    </li>
+    <li class="model">
+      <h3> Two Way Data Binding</h3>
+
+      <p class="two-way">
+        Most likely you will not use this to much, but when you will need this, it will be most likely in Forms or form like parts of code.
+        Input text/data as in user data. In those usecases it can be an asset.
+        The code is also easy to grasp, let's take a look at the input I made  and the output paragraph beneath it.
+      </p>
+
+        <label for="two-way">Type your text: </label>
+        <input type="text" id="two-way" [(ngModel)]=inputText  value="inputText"  />
+
+      <div class="output-section">
+        <label for="output">Check out the output</label>
+        <p id="output" class="output">
+          {{inputText}}
+        </p>
+      </div>
+    </li>
+
+    <li class="boot-model">
+      <h3>  Adding Bootstrap </h3>
+
+      <p>
+        Using Bootstrap for it's many models and other allready made
+        components, objects and much more. <br>
+        Just give it your spin and touch, that way all the assets don't look the same Bootstrappie way!
+      </p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn mod btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+     </li>
+  </ol>
+  <div class="cards-div">
+    <div class="card" style="width: 18rem;">
+      <img width="200" height="200" src="https://images.pexels.com/photos/1324350/pexels-photo-1324350.jpeg?cs=srgb&dl=pexels-damon-hall-1324350.jpg&fm=jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text" style="color:black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-success">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>

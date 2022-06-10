@@ -1,0 +1,113 @@
+.code-box  {
+  width:  35vw;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+     margin: 1.5rem auto;
+     box-shadow: none;
+     border: none;
+     outline: none;
+     transition: width 350ms ease-in,
+            height 350ms ease-in,
+            border 350ms ease-in;
+
+     &:hover {
+       width: 150%;
+       height: 150%;
+       padding: 0.6rem;
+       border: 1px solid #fff;
+     }
+   }
+}
+
+.btn {
+  padding: 0.2rem 1rem;
+  margin-top: 2rem;
+  width: 12rem;
+  font-size: 1.4rem;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  background-color: hsl(272, 98%, 53%);
+  color: #fff;
+  cursor: pointer;
+
+  &.mod {
+    border-color: aqua;
+    color: aqua;
+  }
+}
+
+label {
+  width: 12rem;
+}
+
+input {
+  font-family: 'Convergence' , sans-serif;
+  font-size: 1.2rem;
+  width: 25rem;
+  margin: 1rem 6rem;
+  padding: 1rem;
+  border: 2px solid aqua;
+  border-radius: 1.5rem;
+  background: none;
+  outline: none;
+  color: #fff;
+  transition: border 350ms ease;
+
+  &:focus {
+    border: 2px solid hsl(272, 98%, 53%);
+  }
+
+  &:focus ~ div .output {
+    border: 2px solid aqua;
+  }
+
+}
+
+.output {
+  display: inline-block;
+  // float: right;
+  margin: 2rem 3rem;
+  width: 25rem;
+  border: 2px solid hsl(272, 98%, 53%);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  transition: border 350ms ease;
+  font-size: 1.2rem;
+
+}
+
+/**
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 6px;
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+**/
+

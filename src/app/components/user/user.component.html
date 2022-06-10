@@ -1,0 +1,78 @@
+<div class="user-con">
+  <table class="table table-bordered">
+    <div class="table-block-one">
+      <tr class="bg-success">
+        <th>ID</th>
+        <th >Name</th>
+        <th>Username</th>
+        <th>email</th>
+        <th>Phone</th>
+      </tr>
+
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+      </tr>
+    </div>
+
+  </table>
+
+  <table  class="table table-bordered">
+    <div class="table-block-two">
+      <tr class="bg-success">
+        <th >Street</th>
+        <th>Suite</th>
+        <th>City</th>
+        <th>Zipcode</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+      </tr>
+
+      <tr>
+        <td>{{ user.address.street }}</td>
+        <td>{{ user.address.suite }}</td>
+        <td>{{ user.address.city }}</td>
+        <td>{{ user.address.zipcode }}</td>
+        <td>{{ user.address.geo.lat }}</td>
+        <td>{{ user.address.geo.lng }}</td>
+      </tr>
+    </div>
+  </table>
+
+  <table  class="table table-bordered">
+    <div class="table-block-three">
+      <tr class="bg-success">
+        <th >Website</th>
+        <th>Company Name</th>
+        <th>Company Catch Phrase</th>
+        <th>Company BS</th>
+      </tr>
+
+      <tr>
+        <td>{{ user.website }}</td>
+        <td>{{ user.company.name }}</td>
+        <td>{{ user.company.catchPhrase }}</td>
+        <td>{{ user.company.bs }}</td>
+      </tr>
+    </div>
+  </table>
+
+  <h2 class="nested-title">Nested Routes</h2>
+  <div class="nav bg-success">
+    <ul style="list-style: none;" class="d-flex justify-content-space-between">
+      <li><a class="nav nav-link nav-tabs mr-4 " style="color:white; text-decoration:none;" routerLink="address">Address</a></li>
+      <li><a class="nav nav-link nav-tabs" style="color:white; text-decoration:none;" routerLink="company">Company</a></li>
+    </ul>
+  </div>
+  <router-outlet >
+    <!-- [usy]=user -->
+    <app-address
+    ></app-address>
+  </router-outlet>
+</div>
+
+
+

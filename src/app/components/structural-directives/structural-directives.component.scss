@@ -1,0 +1,91 @@
+// @use '../../../colors' as *;
+@use 'src/colors' as *;
+
+.nav-menu {
+  display: flex;
+  text-align: right;
+  list-style: none;
+  margin-top: 1.5rem;
+
+  li {
+    margin-right: 1.5rem;
+    transition: transform 400ms ease;
+
+    &:hover {
+      color: thistle;
+      transform: scale(1.1);
+    }
+
+    a {
+      text-decoration: none;
+      color: aqua;
+      font-size: 1.2rem;
+      width: 100%;
+      transition: color 400ms ease;
+
+      &:hover {
+        color: thistle;
+      }
+    }
+  }
+}
+
+.cards-container {
+  min-height: 100vh;
+  margin: 2rem auto;
+  max-width: 95vw;
+
+
+  // .cards {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  // }
+}
+
+.tables-container {
+  min-height: 100vh;
+  background-color: map-get($colors, secondary, 500);
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.pipes-tables {
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: map-get($colors, secondary, 200);
+}
+
+.btn-pipes {
+  background: linear-gradient(120deg, map-get($colors, secondary, 200), map-get($colors, secondary, 500));
+  color: skyblue;
+  margin-bottom: 1.5rem;
+  border: 2px solid skyblue;
+  border-radius: 1.5rem;
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  transition: background-color 400ms ease-in-out,
+  color 400ms ease-in-out, border-color 400ms ease-in-out;
+
+  &:hover {
+    background: linear-gradient(120deg, map-get($colors, secondary, 500), map-get($colors, secondary, 200));
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+.if-container {
+  min-height: 100vh;
+  margin-top: 2rem;
+  background-color: map-get($colors, primary, 500);
+  padding: 1rem;
+}
+
+
+.switch-container {
+  min-height: 100vh;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: map-get($colors, greens, 500);
+}

@@ -1,0 +1,31 @@
+<div class="services-con">
+  <h1 class="title">{{ servicePageTitle }}</h1>
+
+  <div class="table-placeholder-con">
+    <table class="table" cell-border="1" style="color: white; border: 1px solid white;">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Street</th>
+        <th>Company</th>
+        <th>Phone</th>
+      </tr>
+
+      <!-- <tr >
+        <td>placeholder}</td>
+        <td>}placeholder</td>
+      </tr> -->
+
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address.street }}</td>
+        <td>{{ user.company.name }}</td>
+        <td>{{ user.phone }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+

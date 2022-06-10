@@ -1,0 +1,34 @@
+*,  *::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.title {
+  color: aqua;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+table {
+  padding: 1rem;
+  width: 92vw;
+  margin: 2rem auto;
+  text-align: center;
+
+   td {
+    padding:0.5rem 1rem;
+  }
+
+  th {
+    background-color: hsl(274, 81%, 47%);
+    padding: 0.5rem;
+  }
+
+}
+
+table, th, td {
+  border: 2px solid #fff;
+}
