@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
   }
 
   canActivate() {
-    if(this.authService.isUserLoggedIn()) {
+    if(this.authService.isUserLoggedIn) {
       return true
     }
     window.alert("No permission to enter!")
